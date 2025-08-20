@@ -1,0 +1,283 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    line-height: 1.8;
+}
+
+body{
+    background-color: #F5E6D3;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.5s ease; /* suavidad si hay cambios */
+
+}
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2{
+    color: #A0522D;
+}
+
+.header-principal {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+    background-color: #F5E6D3;
+    filter: drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.5));
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    padding: 1rem 2rem;
+    position: sticky; /*chequear que hace */
+    top: 0; /*chequear que hace */
+    z-index: 1000; /*chequear que hace */
+    border-bottom: 3px solid #D4A437;
+    /*background: linear-gradient(to left, #A0522D, #ffffff);*/
+}
+
+.header-principal nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+  .header-principal ul li a{
+    text-decoration: none;
+    color:  #333;
+    margin: 0 1rem;
+    font-size: 0.5rem;
+    transition: all 0.15s ease-in-out;
+}
+
+.header-principal ul li a:hover{
+    text-decoration: none;
+    transform: scale(1.05);
+    color: #D4A437;
+    border-bottom: 1px solid #C47A6D; /* Rosa Polvoriento */
+    
+}
+
+.logo{  
+    height: 100%;
+    width: auto;
+    
+    
+}
+
+.logo img{
+    height: 100%;
+    width: auto;    
+}
+
+/*footer {
+  position: sticky;
+  bottom: 0;
+  background-color: #795124;
+  padding: 10px;
+  width: 100vw; 
+}*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 100%;
+}
+
+
+.hero-banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 68vh; /* llena toda la ventana en la entrada */
+    width: 100%;
+    margin-bottom: 40px;
+    gap: 40px;
+    border-left: 5px solid  #D4A437; 
+    padding-left: 20px;
+}
+
+.hero-banner h1{
+    color:#A0522D;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.hero-banner p{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    max-width: 100%;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.btn{
+    background-color:#A0522D;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent; 
+}
+
+.btn:hover {
+    background-color: #A0522D;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border: 2px solid #D4A437; /* Vara de Oro */
+}
+
+.productos-destacados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    padding: 60px 20px;
+    border-top: 2px solid  #D4A437; 
+    background: linear-gradient(135deg, #F5E6D3 0%, #87A96B22 100%);
+    
+  }
+
+.productos-destacados h2{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: auto;
+}
+
+.contenedor-productos{
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    gap: 20px;
+}
+
+.singleProduct{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*background: linear-gradient(180deg, #F5E6D3 0%, #87A96B15 100%)*/
+    background: rgba(245, 230, 211, 0.8);
+    max-width: 280px;
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid #D4A437;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
+    backdrop-filter: blur(6px);
+}
+
+.singleProduct:hover {
+    transform: translateY(-5px); /* efecto levantar */
+    border: 2px solid #D4A437; 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+
+}
+
+.singleProduct img{
+    max-width: 80%;
+    height: auto;
+}
+
+.nombreProducto{
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #D4A437;
+    margin: auto;
+}
+
+footer{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+   background: linear-gradient(135deg, #A0522D, #C47A6D);
+
+
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  gap: 1rem;
+  font-size: 0.65rem;
+}
+
+.footer-container a{
+    color: #D4A437;
+    transition: color 0.3s ease;
+}
+
+.footer-container a:hover{
+    color: #ffffff;
+}
+
+.footer-container p{
+    font-size: 0.5rem;
+}
+
+p a {
+  text-decoration: none; 
+  color: black; 
+}
+
+p a:hover{
+    text-decoration: underline;
+
+}
+
+.footer-copyright{
+    color: #000000;
+    font-size: 0.5rem;
+}
+
+
+
+
+@media (min-width: 768px){
+
+    .header-principal{
+        flex-direction: row;
+        justify-content: space-between;   
+    }
+
+    .logo{  
+    height: 80%;
+    width: auto;
+    }
+
+    .hero-banner{
+        height: 100vh;
+
+    }
+    .productos-destacados{
+        gap: 10%;
+    }
+    .contenedor-productos{
+    display: flex;
+    flex-direction:row ;
+}
+}
+
