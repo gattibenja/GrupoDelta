@@ -7,11 +7,10 @@
 
 body{
     background-color: #F5E6D3;
-    width: 100%;
-    height: 100%;
-    transition: background-color 0.5s ease; /* suavidad si hay cambios */
-
+    
+    transition: background-color 0.5s ease; 
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -21,68 +20,83 @@ h1, h2{
 }
 
 .header-principal {
-
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
-    height: 15vh;
+    height: auto;
     background-color: #F5E6D3;
     filter: drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.5));
     font-family: 'Inter', sans-serif;
     font-weight: 200;
-    padding: 1rem 2rem;
-    position: sticky; /*chequear que hace */
-    top: 0; /*chequear que hace */
-    z-index: 1000; /*chequear que hace */
+    padding: 0.4rem 1rem;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
     border-bottom: 3px solid #D4A437;
-    /*background: linear-gradient(to left, #A0522D, #ffffff);*/
+    
 }
 
-.header-principal nav ul{
+
+
+nav ul{
     display: flex;
     flex-direction: row;
-    gap: 35px;
+    gap: 15px;
     text-decoration: none;
     list-style-type: none;
+   
 }
 
-  .header-principal ul li a{
+nav a{
     text-decoration: none;
     color:  #333;
     margin: 0 1rem;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     transition: all 0.15s ease-in-out;
 }
 
-.header-principal ul li a:hover{
+nav a:hover{
     text-decoration: none;
     transform: scale(1.05);
     color: #D4A437;
-    border-bottom: 1px solid #C47A6D; /* Rosa Polvoriento */
-    
+    border-bottom: 1px solid #C47A6D;  
 }
 
 .logo{  
-    height: 100%;
+    height: 1.2rem;
     width: auto;
-    
-    
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #A0522D;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+   
+
 }
 
 .logo img{
     height: 100%;
-    width: auto;    
+    width: 100%;    
 }
 
-/*footer {
-  position: sticky;
-  bottom: 0;
-  background-color: #795124;
-  padding: 10px;
-  width: 100vw; 
-}*/
+.carritoCompra{
+  height: 1.2rem;
+  width: auto; 
+  justify-content: center; 
+  align-items: center; 
+  cursor: pointer;
+
+}
+
+.carritoCompra img{
+    height: 100%;
+    width: 100%;
+    
+}
+
 
 main{
     display: flex;
@@ -93,34 +107,64 @@ main{
 
 
 .hero-banner{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    min-height: 68vh; /* llena toda la ventana en la entrada */
+    min-height: 72vh; /* llena toda la ventana en la entrada */
     width: 100%;
     margin-bottom: 40px;
-    gap: 40px;
-    border-left: 5px solid  #D4A437; 
+    padding: 30px;
     padding-left: 20px;
+    background-image: url('../../Resources/imgIndex/Kit de imágenes/Kit de imágenes/carpintero\ fabricand.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    border-radius: 5px;
+    color: #fff;
+    filter: drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.25));
+  
+    
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.40); 
+  z-index: 0;
 }
 
 .hero-banner h1{
-    color:#A0522D;
-    font-size: 2.5rem;
+    color:#F5E6D3; 
+    font-size: 2.1rem;
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
 
-.hero-banner p{
-    font-size: 1.1rem;
-    line-height: 1.6;
-    max-width: 600px;
-    max-width: 100%;
+.middleHero{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+
+.middleHero p{
+    font-size: 0.9rem;
+    line-height: 1.4;
+    max-width: 110px;
+    
     font-weight: 400;
-    font-family: 'Inter', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
+    
 }
 
 .btn{
@@ -134,6 +178,7 @@ main{
     font-weight: 400;
     transition: all 0.3s ease-in-out;
     border: 1px solid transparent; 
+    border: 0.5px solid #D4A437;
 }
 
 .btn:hover {
@@ -141,6 +186,14 @@ main{
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     border: 2px solid #D4A437; /* Vara de Oro */
+}
+
+.hero-banner .middleHero, 
+.hero-banner h1,
+.hero-banner p,
+.hero-banner .btn {
+  position: relative;
+  z-index: 1; 
 }
 
 .productos-destacados{
@@ -172,7 +225,6 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*background: linear-gradient(180deg, #F5E6D3 0%, #87A96B15 100%)*/
     background: rgba(245, 230, 211, 0.8);
     max-width: 280px;
     padding: 20px;
@@ -181,13 +233,13 @@ main{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08); 
     backdrop-filter: blur(6px);
+    
 }
 
 .singleProduct:hover {
     transform: translateY(-5px); /* efecto levantar */
     border: 2px solid #D4A437; 
-    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
-
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.08);
 }
 
 .singleProduct img{
@@ -200,6 +252,7 @@ main{
     font-size: 1rem;
     color: #D4A437;
     margin: auto;
+    
 }
 
 footer{
@@ -260,24 +313,99 @@ p a:hover{
 
     .header-principal{
         flex-direction: row;
-        justify-content: space-between;   
+        justify-content: space-between; 
+        height: auto;
+        padding: 0.6rem 2rem;
+    }
+
+    .header-principal ul{
+        gap: 20px;
+    }
+    nav a{
+        font-family: sans-serif;
+        font-size: 1.2rem;
     }
 
     .logo{  
-    height: 80%;
+    height: 2.5rem;
     width: auto;
+    max-height: 3rem;
+    }
+
+    .logo img{
+        max-height: 3rem;
+    }
+
+    .carritoCompra{
+        height: 2.5rem;
+        width: auto;
+        max-height: 3rem;
+    }
+
+    .carritoCompra img{
+        max-height: 3rem;
     }
 
     .hero-banner{
-        height: 100vh;
+        display: flex;
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 8%;
+       
+    }
 
+    .hero-banner h1{
+        font-size: 4rem;
+        
+    }
+
+    .hero-banner p{
+        font-size: 2rem;
     }
     .productos-destacados{
-        gap: 10%;
+        display: flex;
+        gap: 50%;
+        margin-bottom: 10%;
     }
+
     .contenedor-productos{
     display: flex;
     flex-direction:row ;
-}
+    }
+
+    .productos-destacados h2{
+        font-size: 3rem;
+        margin-bottom: 4%;
+    }
+
+    .nombreProducto{
+        font-size: 1.3rem;
+    }
+
+    .singleProduct{
+    max-width: 500px;
+    padding: 20px;
+    
+    }
+
+    singleProduct img{
+    max-width: 100%;
+    height: auto;
+    }
+
+    .footer-container a{
+        font-size: 0.75rem;
+    }
+    .footer-copyright{
+        font-size: 0.8rem;
+    }
+
+    .btn{
+    border-radius: 50px;
+    padding: 15px 18px;
+    font-size: 1.5rem;
+    font-weight: 400; 
+    }
+
 }
 
