@@ -1,0 +1,91 @@
+/* Estilos específicos del formulario de contacto */
+
+.contacto-container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: #fffdf9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.contacto-container h1 {
+  font-size: 2rem;
+  color: #A0522D;
+  margin-bottom: 10px;
+}
+/* Cuando hay error */
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-left: 8px;
+}
+
+.input-error {
+  border: 2px solid red;
+  outline: none;
+  border-radius: 4px;
+}
+
+.input-success {
+  border: 2px solid green;
+  border-radius: 4px;
+}
+
+.descripcion {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #5a4632;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.formulario label {
+  font-weight: bold;
+  color: #3e2d1a;
+}
+
+.formulario input, 
+.formulario textarea {
+  padding: 10px;
+  border: 1px solid #c4a77d;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.formulario button {
+  padding: 12px;
+  background-color: #A0522D;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.formulario button:hover {
+  background-color: #8c532e;
+}
+
+.mensaje-exito {
+  margin-top: 20px;
+  padding: 15px;
+  background: #d4f8d4;
+  color: #27632a;
+  border: 1px solid #a8e6a3;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.oculto {
+  display: none;
+}
