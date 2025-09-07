@@ -4,17 +4,17 @@ const productos = [
     {
     id: 1,
     nombre: "Mesa de Centro Aconcagua",
-    imagenUrl: "../../Resources/imgIndex/Kit de imágenes/Kit de imágenes/Mesa de Noche Aconcagua.png",
+    imagenUrl: "../../imagenes/MesadeNocheAconcagua.png",
 },
 {
     id: 2,
     nombre: "Mesa de Centro Araucaria",
-    imagenUrl: "../../Resources/imgIndex/Kit de imágenes/Kit de imágenes/Mesa de Centro Araucaria.png", 
+    imagenUrl: "../../imagenes/MesadecentroAraucaria.png",
 },
 {
     id: 3,
     nombre: "Sofá Patagonia",
-    imagenUrl: "../../Resources/imgIndex/Kit de imágenes/Kit de imágenes/Sofá Patagonia.png",
+    imagenUrl: "../../imagenes/SofáPatagonia.png",
 }
 ];
 function renderizarProductos(lista){
