@@ -2,26 +2,28 @@ const contenedor = document.querySelector('.contenedor-productos');
 
 const productos = [ 
     {
-    id: 1,
+    id: 6,
     nombre: "Mesa de Centro Aconcagua",
     imagenUrl: "../../imagenes/MesadeNocheAconcagua.png",
 },
 {
-    id: 2,
+    id: 5,
     nombre: "Mesa de Centro Araucaria",
     imagenUrl: "../../imagenes/MesadecentroAraucaria.png",
 },
 {
-    id: 3,
+    id: 12,
     nombre: "Sofá Patagonia",
-    imagenUrl: "../../imagenes/SofáPatagonia.png",
+    imagenUrl: "../../imagenes/SofaPatagonia.png",
 }
 ];
+
+
 function renderizarProductos(lista){
     lista.forEach(producto => {
     let link = document.createElement('a');
     link.classList.add('linkDestacados');
-    link.href = "../../Paginas/detailProduct/detailUno.html?id=" + lista.id;
+    link.href = `../detailProduct/detailUno.html?id=${producto.id}`;
     let subContenedor = document.createElement("div");
     subContenedor.classList.add("singleProduct");
     let foto = document.createElement("img");
