@@ -204,7 +204,18 @@ nav a:hover{
   border: 2px solid #D4A437;
 }
 
+ .botones-producto{
+    text-align: center;
+  }
+
 @media (min-width: 768px) {
+
+    .producto{
+      display: flex;
+      justify-content: space-between;
+      max-height: 800px;
+    }
+  
   .catalogo h1 {
     font-size: 3rem;
   }
@@ -224,6 +235,9 @@ nav a:hover{
   .btn-agregar, .btn-info {
     padding: 12px 20px;
     font-size: 1rem;
+  }
+  .botones-producto{
+    text-align: center;
   }
 }
 
