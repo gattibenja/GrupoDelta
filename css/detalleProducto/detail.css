@@ -250,3 +250,58 @@ p a:hover{
     color: #000000;
     font-size: 0.5rem;
 }
+
+
+/* ...código existente... */
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .detalle-producto {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    max-width: 98vw;
+  }
+  .detalle-img, .detalle-info {
+    max-width: 100%;
+    min-width: unset;
+  }
+  .detalle-img {
+    margin-bottom: 1.5rem;
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .detalle-producto {
+    padding: 1rem 0.2rem;
+    margin: 20px 20px 0px 20px;
+    gap: 1.2rem;
+  }
+  .detalle-img {
+    padding: 0.5rem;
+    min-width: 0;
+    max-width: 100vw;
+  }
+  .detalle-img img {
+    max-width: 90vw;
+    height: auto;
+  }
+  .detalle-info {
+    gap: 0.7rem;
+    padding: 0 0.2rem;
+  }
+  .detalle-titulo {
+    font-size: 1.3rem;
+  }
+  .detalle-precio-carrito {
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: flex-start;
+  }
+
+
+}
+
+/* ...resto de tu código existente... */
