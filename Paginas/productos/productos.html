@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>productos</title>
-    <link rel="stylesheet" href="productosStyles.css">
+    <link rel="stylesheet" href="/css/producto/productosStyles.css">
 </head>
 <body>
 
     <header class="header-principal">
         <div class="logo">
-            <img src="../../Resources/imgIndex/Kit de imágenes/Kit de imágenes/logo.svg" alt="Logo">
+            <img src="../../imagenes/logo.svg" alt="Logo">
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="">Catálogo</a></li>
-                <li><a href="">Contacto</a></li>
+                <li><a href="/Paginas/Index/index.html">Inicio</a></li>
+                <li><a href="/Paginas/productos/productos.html">Catálogo</a></li>
+                <li><a href="/Paginas/Contacto/contacto.html">Contacto</a></li>
             </ul>
         </nav>
         <div class="carritoCompra">
-            <img src="../../Resources/imgIndex/Kit de imágenes/Kit de imágenes/carro-de-la-compra.png" alt="">
+            <img src="../../imagenes/carro-de-la-compra.png" alt="">
         </div>
     </header>
 
@@ -45,7 +45,7 @@
     </footer>
 
     <script>
-      fetch("productos.json")
+      fetch("/productos.json")
         .then(function(res) { return res.json(); })
         .then(function(productos) {
           var contenedor = document.getElementById("productos-container");
@@ -68,9 +68,8 @@
               agregarAlCarrito(producto);
             });
 
-            // 🔹 acá el cambio: redirección en vez de alert
             article.querySelector(".btn-info").addEventListener("click", function() {
-              window.location.href = "detailUno.html?id=" + producto.id;
+              window.location.href = "/Paginas/detailProduct/detailUno.html?id=" + producto.id;
             });
 
             contenedor.appendChild(article);
