@@ -81,8 +81,8 @@
     "colchon": "Compatible con colchón 160×200",
     "caracteristicas": "Cabecero flotante acolchado",
     "precio": 1250000,
-    "imagen": ""
-  },
+    "imagen": "../recursos/Kitdeimagenes/CamaNeuquen.png"
+    },
 
   {
     "id": 8,
@@ -93,7 +93,7 @@
     "acabado": "Base cromada, tapizado premium",
     "regulacion": "Altura + inclinación respaldo",
     "certificacion": "Ergonomía europea EN 1335",
-    "imagen": ""
+      "imagen": "../recursos/Kitdeimagenes/SillaDeTrabajoBelgrano.png"
   },
   {
     "id": 9,
