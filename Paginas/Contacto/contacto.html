@@ -66,3 +66,72 @@
   <script src="contacto.js"></script>
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - NEXUS</title>
+  <!-- estilos globales -->
+  <link rel="stylesheet" href="../Index/indexStyles.css">
+  <!-- estilos propios de contacto -->
+  <link rel="stylesheet" href="contactoStyles.css">
+</head>
+<body>
+  <header class="header-principal">
+    <div class="logo">
+      <img src="../../Resources/imgIndex/Kit de imágenes/Kit de imágenes/logo.svg" alt="Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="#">Catálogo</a></li>
+        <li><a href="contacto.html" class="activo">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="carritoCompra">
+      <img src="../../Resources/imgIndex/Kit de imágenes/Kit de imágenes/carro-de-la-compra.png" alt="">
+    </div>
+  </header>
+
+  <main class="contacto-container">
+    <h1>Contáctanos</h1>
+    <p class="descripcion">Nuestros clientes suelen tener preguntas. Déjanos tus dudas y te responderemos lo antes posible.</p>
+
+    <<form id="contactForm" class="formulario">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required>
+      <span class="error" id="errorNombre"></span>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <span class="error" id="errorEmail"></span>
+
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+      <span class="error" id="errorMensaje"></span>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div id="mensajeExito" class="mensaje-exito oculto">
+      ✅ ¡Tu mensaje fue enviado con éxito!
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p class="info"><a href="#">Acerca de nosotros</a></p>
+      <p class="info"><a href="#">Términos y condiciones</a></p>
+      <p class="info"><a href="#">Política de privacidad</a></p>
+      <p class="info"><a href="#">Preguntas frecuentes</a></p>
+    </div>
+    <div class="copy">
+      <p class="footer-copyright">&copy; 2025 Hermanos Jota. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="contacto.js"></script>
+</body>
+</html>
