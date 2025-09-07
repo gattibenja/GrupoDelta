@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>productos</title>
-    <link rel="stylesheet" href="../../css/producto/productosStyles.css">
+    <link rel="stylesheet" href="/css/producto/productosStyles.css">
 </head>
 <body>
 
@@ -14,9 +14,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="../Index/index.html">Inicio</a></li>
-                <li><a href="productos.html">Catálogo</a></li>
-                <li><a href="../Contacto/contacto.html">Contacto</a></li>
+                <li><a href="/Paginas/Index/index.html">Inicio</a></li>
+                <li><a href="/Paginas/productos/productos.html">Catálogo</a></li>
+                <li><a href="/Paginas/Contacto/contacto.html">Contacto</a></li>
             </ul>
         </nav>
         <div class="carritoCompra">
@@ -25,21 +25,11 @@
     </header>
 
     <main>
-        <main>
-    <section class="catalogo">
-        <h1>Catálogo de Productos</h1>
-        <div class="productos-container">
-            <article class="producto">
-                <img src="../../Resources/imgIndex/Kit de imágenes/Kit de imágenes/Sofá Patagonia.png" alt="Producto">
-                <h2>Nombre del Producto</h2>
-                <p class="descripcion">Sofá de diseño elegante y cómodo, tapizado en tela suave y resistente, ideal para crear un ambiente cálido y acogedor en tu living</p>
-                <p class="precio">$500.000</p>
-                <button class="btn-agregar">Agregar al carrito</button>
-            </article>            
-        </div>
-    </section>
-</main>
-
+        <section class="catalogo">
+            <h1>Catálogo de Productos</h1>
+            <div id="productos-container" class="productos-container">        
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -50,31 +40,70 @@
             <p class="info"><a href="https://www.instagram.com/hermanosjota_ba" target="_blank">Preguntas frecuentes</a></p>
         </div>
         <div class="copy">
-                <p class="footer-copyright"> &copy; 2025 Hermanos Jota. Todos los derechos reservados.</p>
+            <p class="footer-copyright"> &copy; 2025 Hermanos Jota. Todos los derechos reservados.</p>
         </div>
-
     </footer>
-        <script>
-  fetch("productos.json")
-    .then(res => res.json())
-    .then(productos => {
-      const contenedor = document.getElementById("productos-container");
 
-      productos.forEach(producto => {
-        const article = document.createElement("article");
-        article.classList.add("producto");
+    <script>
+      fetch("/productos.json")
+        .then(function(res) { return res.json(); })
+        .then(function(productos) {
+          var contenedor = document.getElementById("productos-container");
 
-        article.innerHTML = `
-          <img src="${producto.imagen}" alt="${producto.nombre}">
-          <h2>${producto.nombre}</h2>
-          <p class="descripcion">${producto.descripcion}</p>
-          <p class="precio">$${producto.precio ? producto.precio.toLocaleString("es-AR") : ""}</p>
-          <button class="btn-agregar">Agregar al carrito</button>
-        `;
-        contenedor.appendChild(article);
-      });
-    })
-    .catch(err => console.error("Error cargando productos:", err));
-</script>    
+          productos.forEach(function(producto) {
+            var article = document.createElement("article");
+            article.classList.add("producto");
+
+            article.innerHTML = 
+              '<img src="' + producto.imagen + '" alt="' + producto.nombre + '">' +
+              '<h2>' + producto.nombre + '</h2>' +
+              '<p class="descripcion">' + producto.descripcion + '</p>' +
+              '<p class="precio">$' + (producto.precio ? producto.precio.toLocaleString("es-AR") : "") + '</p>' +
+              '<div class="botones-producto">' +
+                '<button class="btn-agregar">Agregar al carrito</button>' +
+                '<button class="btn-info">Ver más información</button>' +
+              '</div>';
+
+            article.querySelector(".btn-agregar").addEventListener("click", function() {
+              agregarAlCarrito(producto);
+            });
+
+            article.querySelector(".btn-info").addEventListener("click", function() {
+              window.location.href = "/Paginas/detailProduct/detailUno.html?id=" + producto.id;
+            });
+
+            contenedor.appendChild(article);
+          });
+        })
+        .catch(function(err) { console.error("Error cargando productos:", err); });
+
+      function obtenerCarrito() {
+        return JSON.parse(localStorage.getItem("carrito")) || [];
+      }
+
+      function guardarCarrito(carrito) {
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+      }
+
+      function agregarAlCarrito(producto) {
+        var carrito = obtenerCarrito();
+        var index = -1;
+        for (var i = 0; i < carrito.length; i++) {
+          if (carrito[i].id === producto.id) {
+            index = i;
+            break;
+          }
+        }
+
+        if (index >= 0) {
+          carrito[index].cantidad++;
+        } else {
+          producto.cantidad = 1;
+          carrito.push(producto);
+        }
+        guardarCarrito(carrito);
+        alert("Producto agregado al carrito: " + producto.nombre);
+      }
+    </script>
 </body>
 </html>

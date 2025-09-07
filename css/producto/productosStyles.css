@@ -71,8 +71,6 @@ nav a:hover{
     display: flex;
     align-items:center ;
     justify-content: center;
-   
-
 }
 
 .logo img{
@@ -100,13 +98,13 @@ nav a:hover{
   flex-direction: column;
   align-items: center;
   padding: 60px 20px;
-  background: linear-gradient(135deg, #F5E6D3 0%, #87A96B22 100%); /* Alabastro cálido con verde salvia suave */
-  border-top: 2px solid #D4A437; /* Vara de oro */
+  background: linear-gradient(135deg, #F5E6D3 0%, #87A96B22 100%);
+  border-top: 2px solid #D4A437;
 }
 
 .catalogo h1 {
   font-size: 2rem;
-  color: #A0522D; /* Siena tostado */
+  color: #A0522D;
   margin-bottom: 2rem;
   font-family: Georgia, 'Times New Roman', serif;
   text-transform: uppercase;
@@ -125,7 +123,7 @@ nav a:hover{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(245, 230, 211, 0.85); /* fondo translúcido */
+  background: rgba(245, 230, 211, 0.85);
   border: 1px solid #D4A437;
   border-radius: 16px;
   padding: 20px;
@@ -177,9 +175,29 @@ nav a:hover{
   border: 1px solid #D4A437;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin: 4px;
 }
 
 .btn-agregar:hover {
+  background-color: #C47A6D; 
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  border: 2px solid #D4A437;
+}
+
+.btn-info {
+  background-color: #A0522D;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  border: 1px solid #D4A437;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 4px;
+}
+
+.btn-info:hover {
   background-color: #C47A6D; 
   transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(0,0,0,0.12);
@@ -203,7 +221,7 @@ nav a:hover{
     font-size: 1.2rem;
   }
 
-  .btn-agregar {
+  .btn-agregar, .btn-info {
     padding: 12px 20px;
     font-size: 1rem;
   }
@@ -216,9 +234,7 @@ footer{
     flex-direction: column;
     gap: 20px;
     align-items: center;
-   background: linear-gradient(135deg, #A0522D, #C47A6D);
-
-
+    background: linear-gradient(135deg, #A0522D, #C47A6D);
 }
 
 .footer-container {
@@ -285,66 +301,4 @@ footer{
     .carritoCompra img{
         max-height: 3rem;
     }
-
-    .hero-banner{
-        display: flex;
-        height: auto;
-        margin-top: 20px;
-        margin-bottom: 8%;
-       
-    }
-
-    .hero-banner h1{
-        font-size: 4rem;
-        
-    }
-
-    .hero-banner p{
-        font-size: 2rem;
-    }
-    .productos-destacados{
-        display: flex;
-        gap: 50%;
-        margin-bottom: 10%;
-    }
-
-    .contenedor-productos{
-    display: flex;
-    flex-direction:row ;
-    }
-
-    .productos-destacados h2{
-        font-size: 3rem;
-        margin-bottom: 4%;
-    }
-
-    .nombreProducto{
-        font-size: 1.3rem;
-    }
-
-    .singleProduct{
-    max-width: 500px;
-    padding: 20px;
-    
-    }
-
-    singleProduct img{
-    max-width: 100%;
-    height: auto;
-    }
-
-    .footer-container a{
-        font-size: 0.75rem;
-    }
-    .footer-copyright{
-        font-size: 0.8rem;
-    }
-
-    .btn{
-    border-radius: 50px;
-    padding: 15px 18px;
-    font-size: 1.5rem;
-    font-weight: 400; 
-    }
-
 }
