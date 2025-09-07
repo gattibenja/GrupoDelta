@@ -1,7 +1,128 @@
-.contenedorCarrito{
+body {
+    background: #f6e8d9;
+}
+
+main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+}
 
+.contenedorCarrito {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.SingleProduct {
+    display: flex;
+    align-items: center;
+    background: #fff8f3;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(160, 82, 45, 0.10);
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+    min-width: 340px;
+    max-width: 540px;
+    width: 100%;
+    transition: box-shadow 0.2s;
+}
+
+.SingleProduct:hover {
+    box-shadow: 0 8px 24px rgba(160, 82, 45, 0.18);
+}
+
+.SingleProduct img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: #f5e6d3;
+    border: 1.5px solid #e0c3a0;
+    margin-right: 1.2rem;
+}
+
+.info-producto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.info-producto h4 {
+    font-size: 1.15rem;
+    color: #a0522d;
+    margin: 0;
+    font-weight: 700;
+}
+
+.info-producto p {
+    margin: 0;
+    color: #6d4c2c;
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.deleteBtn {
+    background: #c47a6d;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+    margin-left: 1rem;
+    align-self: flex-start;
+}
+.deleteBtn:hover {
+    background: #a0522d;
+}
+
+/* Resumen del carrito */
+.resumen-carrito {
+    background: #fff8f3;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(160, 82, 45, 0.10);
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #a0522d;
+    max-width: 420px;
+    width: 100%;
+}
+
+/* Botones de cantidad */
+.cantidadBtn {
+    background: #e0c3a0;
+    color: #a0522d;
+    border: none;
+    border-radius: 6px;
+    padding: 0.3rem 0.8rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cantidadBtn:hover {
+    background: #c47a6d;
+    color: #fff;
+}
+
+/* Ajuste para el span de cantidad */
+.SingleProduct span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #a0522d;
+    background: #f6e8d9;
+    border-radius: 4px;
+    padding: 0.2rem 0.7rem;
+    margin: 0 0.2rem;
+    display: inline-block;
 }
