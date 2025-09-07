@@ -8,7 +8,7 @@ if (itemsCarrito.length === 0){
     contenedorCarrito.innerHTML = "<p>No hay productos en el carrito.</p>";
 }else{
 
-    itemsCarrito.array.forEach(producto => {
+    itemsCarrito.forEach(producto => {
             let item = document.createElement('div');
             item.classList.add("SingleProduct"); //VER SI VOY A USAR LOS ESTILOS IGUALES QUE LOS DE LOS PRODUCTOS DEL INDEX
 
@@ -28,7 +28,7 @@ if (itemsCarrito.length === 0){
             item.appendChild(nombre);
             item.appendChild(precio);
             item.appendChild(deleteBtn);
-            contenedorCarrito(item);
+            contenedorCarrito.appendChild(item);
     });
 }
 
