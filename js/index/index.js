@@ -19,19 +19,29 @@ const productos = [
 ];
 function renderizarProductos(lista){
     lista.forEach(producto => {
-    let subContenedor = document.createElement("div");
-    subContenedor.classList.add("singleProduct");
-    let foto = document.createElement("img");
-    foto.src = producto.imagenUrl;
-    let title = document.createElement("h4");
-    title.textContent = producto.nombre;
-    title.classList.add("nombreProducto");
+        let subContenedor = document.createElement("div");
+        subContenedor.classList.add("singleProduct");
 
-    subContenedor.appendChild(foto);
-    subContenedor.appendChild(title);
+        // Crear el enlace al detalle
+        let link = document.createElement("a");
+        link.href = `../detailProduct/detailUno.html?id=${producto.id}`;
+        link.classList.add("link-detalle");
 
-    contenedor.appendChild(subContenedor);
-});
+        let foto = document.createElement("img");
+        foto.src = producto.imagenUrl;
+        let title = document.createElement("h4");
+        title.textContent = producto.nombre;
+        title.classList.add("nombreProducto");
+
+        // Agregar imagen y título al enlace
+        link.appendChild(foto);
+        link.appendChild(title);
+
+        // Agregar el enlace al contenedor del producto
+        subContenedor.appendChild(link);
+
+        contenedor.appendChild(subContenedor);
+    });
 }
 
 function obtenerProductos(){

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const productoId = parseInt(urlParams.get('id'));
 
     // Cargar el JSON
-    fetch('../productos.json')
+    fetch('../../productos.json')
         .then(response => response.json())
         .then(data => {
             // Buscar el producto con el ID correspondiente
