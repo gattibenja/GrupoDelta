@@ -139,9 +139,9 @@ nav a:hover{
 }
 
 .producto img {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
+  width: 200px;
+  height: 200px;
+  
   border-radius: 8px;
 }
 

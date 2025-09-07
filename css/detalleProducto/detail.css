@@ -80,9 +80,11 @@ html {
     font-size: 0.95rem;
     color: #333;
 }
+
 .detalle-lista li {
     margin-bottom: 0.3rem;
 }
+
 .detalle-lista strong {
     color: #D4A437; /* Vara de Oro */
     font-weight: 500;
