@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>productos</title>
-    <link rel="stylesheet" href="/css/producto/productosStyles.css">
+    <link rel="stylesheet" href="../../css/producto/productosStyles.css">
 </head>
 <body>
 
@@ -14,12 +14,13 @@
         </div>
         <nav>
             <ul>
-                <li><a href="/Paginas/Index/index.html">Inicio</a></li>
-                <li><a href="/Paginas/productos/productos.html">Catálogo</a></li>
-                <li><a href="/Paginas/Contacto/contacto.html">Contacto</a></li>
+                <li><a href="../../Paginas/Index/index.html">Inicio</a></li>
+                <li><a href="../../Paginas/productos/productos.html">Catálogo</a></li>
+                <li><a href="../../Paginas/Contacto/contacto.html">Contacto</a></li>
             </ul>
         </nav>
         <div class="carritoCompra">
+             <a href="../carrito/carrito.html"><img src="../../imagenes/carro-de-la-compra.png" alt=""></a>
             <a href="../carrito/carrito.html"><img src="../../imagenes/carro-de-la-compra.png" alt=""></a>
         </div>
     </header>
@@ -68,8 +69,9 @@
               agregarAlCarrito(producto);
             });
 
+            // 🔹 acá el cambio: redirección en vez de alert
             article.querySelector(".btn-info").addEventListener("click", function() {
-              window.location.href = "/Paginas/detailProduct/detailUno.html?id=" + producto.id;
+              window.location.href = "/Paginas/detailProduct/detailUno.html?id=" + producto.id;;
             });
 
             contenedor.appendChild(article);

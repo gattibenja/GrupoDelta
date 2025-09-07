@@ -2,46 +2,44 @@ const contenedor = document.querySelector('.contenedor-productos');
 
 const productos = [ 
     {
-    id: 1,
+    id: 6,
     nombre: "Mesa de Centro Aconcagua",
     imagenUrl: "../../imagenes/MesadeNocheAconcagua.png",
 },
 {
-    id: 2,
+    id: 5,
     nombre: "Mesa de Centro Araucaria",
     imagenUrl: "../../imagenes/MesadecentroAraucaria.png",
 },
 {
-    id: 3,
+    id: 12,
     nombre: "Sofá Patagonia",
-    imagenUrl: "../../imagenes/SofáPatagonia.png",
+    imagenUrl: "../../imagenes/SofaPatagonia.png",
 }
 ];
+
+
 function renderizarProductos(lista){
     lista.forEach(producto => {
-        let subContenedor = document.createElement("div");
-        subContenedor.classList.add("singleProduct");
+    let link = document.createElement('a');
+    link.classList.add('linkDestacados');
+    link.href = `../detailProduct/detailUno.html?id=${producto.id}`;
+    let subContenedor = document.createElement("div");
+    subContenedor.classList.add("singleProduct");
+    let foto = document.createElement("img");
+    foto.src = producto.imagenUrl;
+    let title = document.createElement("h4");
+    title.textContent = producto.nombre;
+    title.classList.add("nombreProducto");
 
-        // Crear el enlace al detalle
-        let link = document.createElement("a");
-        link.href = `../detailProduct/detailUno.html?id=${producto.id}`;
-        link.classList.add("link-detalle");
+    
+    subContenedor.appendChild(foto);
+    subContenedor.appendChild(title);
 
-        let foto = document.createElement("img");
-        foto.src = producto.imagenUrl;
-        let title = document.createElement("h4");
-        title.textContent = producto.nombre;
-        title.classList.add("nombreProducto");
+    link.appendChild(subContenedor);
 
-        // Agregar imagen y título al enlace
-        link.appendChild(foto);
-        link.appendChild(title);
-
-        // Agregar el enlace al contenedor del producto
-        subContenedor.appendChild(link);
-
-        contenedor.appendChild(subContenedor);
-    });
+    contenedor.appendChild(link);
+});
 }
 
 function obtenerProductos(){
