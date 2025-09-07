@@ -30,7 +30,7 @@
         <h1>Catálogo de Productos</h1>
         <div class="productos-container">
             <article class="producto">
-                <img src="../../imagenes/SofáPatagonia.png" alt="Producto">
+                <img src="../../Resources/imgIndex/Kit de imágenes/Kit de imágenes/Sofá Patagonia.png" alt="Producto">
                 <h2>Nombre del Producto</h2>
                 <p class="descripcion">Sofá de diseño elegante y cómodo, tapizado en tela suave y resistente, ideal para crear un ambiente cálido y acogedor en tu living</p>
                 <p class="precio">$500.000</p>
@@ -54,6 +54,27 @@
         </div>
 
     </footer>
-     
+        <script>
+  fetch("productos.json")
+    .then(res => res.json())
+    .then(productos => {
+      const contenedor = document.getElementById("productos-container");
+
+      productos.forEach(producto => {
+        const article = document.createElement("article");
+        article.classList.add("producto");
+
+        article.innerHTML = `
+          <img src="${producto.imagen}" alt="${producto.nombre}">
+          <h2>${producto.nombre}</h2>
+          <p class="descripcion">${producto.descripcion}</p>
+          <p class="precio">$${producto.precio ? producto.precio.toLocaleString("es-AR") : ""}</p>
+          <button class="btn-agregar">Agregar al carrito</button>
+        `;
+        contenedor.appendChild(article);
+      });
+    })
+    .catch(err => console.error("Error cargando productos:", err));
+</script>    
 </body>
 </html>
