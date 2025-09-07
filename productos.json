@@ -8,10 +8,10 @@
     "acabado": "Aceite natural ecológico",
     "peso": "68 kg",
     "capacidad": "6 compartimentos interiores",
-    "precio": 1250000,
+    "precio": 1899000,
     "imagen": "../../imagenes/AparadorUspallata.png"
   },
-    {
+  {
     "id": 2,
     "nombre": "Biblioteca Recoleta",
     "descripcion": "Sistema modular de estantes abierto que combina estructura de acero Sage Green y repisas en roble claro. Perfecta para colecciones y objetos de diseño, su diseño versátil se adapta a cualquier espacio contemporáneo con elegancia funcional.",
@@ -20,10 +20,10 @@
     "acabado": "Laca mate ecológica",
     "capacidad": "45 kg por estante",
     "modulares": "5 estantes ajustables",
-    "precio": 1250000,
+    "precio": 1549000,
     "imagen": "../../imagenes/BibliotecaRecoleta.png"
   },
-    {
+  {
     "id": 3,
     "nombre": "Butaca Mendoza",
     "descripcion": "Butaca tapizada en bouclé Dusty Rose con base de madera de guatambú. El respaldo curvo abraza el cuerpo y ofrece máximo confort, mientras que su diseño orgánico aporta calidez y sofisticación a cualquier ambiente contemporáneo.",
@@ -32,10 +32,10 @@
     "acabado": "Cera vegetal, tapizado premium",
     "tapizado": "Repelente al agua y manchas",
     "confort": "Espuma alta densidad",
-    "precio": 1250000,
+    "precio": 1125000,
     "imagen": "../../imagenes/ButacaMendoza.png"
   },
-    {
+  {
     "id": 4,
     "nombre": "Sillón Copacabana",
     "descripcion": "Sillón lounge en cuero cognac con base giratoria en acero Burnt Sienna. Inspirado en la estética brasilera moderna de los 60, combina comodidad excepcional con un diseño icónico que trasciende tendencias y épocas.",
@@ -44,10 +44,10 @@
     "acabado": "Cuero anilina premium",
     "rotacion": "360° silenciosa y suave",
     "garantia": "10 años en estructura",
-    "precio": 1250000,
+    "precio": 2390000,
     "imagen": "../../imagenes/SillonCopacabana.png"
   },
-    {
+  {
     "id": 5,
     "nombre": "Mesa de Centro Araucaria",
     "descripcion": "Mesa de centro con sobre circular de mármol Patagonia y base de tres patas en madera de nogal. Su diseño minimalista se convierte en el punto focal perfecto para cualquier sala de estar contemporánea, combinando la frialdad del mármol con la calidez de la madera.",
@@ -56,10 +56,10 @@
     "acabado": "Mármol pulido, aceite natural en madera",
     "peso": "42 kg",
     "capacidad": "25 kg distribuidos",
-    "precio": 1250000,
+    "precio": 980000,
     "imagen": "../../imagenes/MesaDeCentroAraucaria.png"
   },
-    {
+  {
     "id": 6,
     "nombre": "Mesa de Noche Aconcagua",
     "descripcion": "Mesa de noche con cajón oculto y repisa inferior en roble certificado FSC®. Su diseño limpio y funcional permite convivir con diferentes estilos de dormitorio, ofreciendo almacenamiento discreto y elegante para objetos personales.",
@@ -68,10 +68,10 @@
     "acabado": "Barniz mate de poliuretano",
     "almacenamiento": "1 cajón + repisa inferior",
     "caracteristicas": "Cajón con cierre suave",
-    "precio": 1250000,
+    "precio": 799000,
     "imagen": "../../imagenes/MesadeNocheAconcagua.png"
   },
-    {
+  {
     "id": 7,
     "nombre": "Cama Neuquén",
     "descripcion": "Cama plataforma con cabecero flotante tapizado en lino natural y estructura de madera maciza. Su diseño minimalista y sofisticado crea un ambiente de serenidad y elegancia, perfecto para dormitorios contemporáneos que buscan paz y simplicidad.",
@@ -80,10 +80,9 @@
     "acabado": "Aceite natural, tapizado premium",
     "colchon": "Compatible con colchón 160×200",
     "caracteristicas": "Cabecero flotante acolchado",
-    "precio": 1250000,
+    "precio": 2150000,
     "imagen": "../../imagenes/CamaNeuquen.png"
-    },
-
+  },
   {
     "id": 8,
     "nombre": "Silla de Trabajo Belgrano",
@@ -93,7 +92,7 @@
     "acabado": "Base cromada, tapizado premium",
     "regulacion": "Altura + inclinación respaldo",
     "certificacion": "Ergonomía europea EN 1335",
-    "precio": 1250000,
+    "precio": 649000,
     "imagen": "../../imagenes/SillaDeTrabajoBelgrano.png"
   },
   {
@@ -105,7 +104,7 @@
     "acabado": "Laca mate resistente",
     "almacenamiento": "1 cajón con organizador",
     "cables": "Pasacables integrado",
-    "precio": 1250000,
+    "precio": 1349000,
     "imagen": "../../imagenes/EscritorioCosta.png"
   },
   {
@@ -117,7 +116,7 @@
     "acabado": "Laca mate, pintura epoxi",
     "apilables": "Hasta 6 sillas",
     "incluye": "Set de 4 sillas",
-    "precio": 1250000,
+    "precio": 1199000,
     "imagen": "../../imagenes/SillasCordoba.png"
   },
   {
@@ -129,7 +128,7 @@
     "acabado": "Aceite-cera natural",
     "capacidad": "6-10 comensales",
     "extension": "Sistema de mariposa central",
-    "precio": 1250000,
+    "precio": 2599000,
     "imagen": "../../imagenes/MesaComedorPampa.png"
   },
   {
@@ -141,8 +140,7 @@
     "tapizado": "Lino 100% natural premium",
     "relleno": "Espuma HR + plumón reciclado",
     "sostenibilidad": "Materiales 100% reciclables",
-    "precio": 1250000,
+    "precio": 2999000,
     "imagen": "../../imagenes/SofaPatagonia.png"
   }
-
 ]
