@@ -19,6 +19,9 @@ const productos = [
 ];
 function renderizarProductos(lista){
     lista.forEach(producto => {
+    let link = document.createElement('a');
+    link.classList.add('linkDestacados');
+    link.href = "../../Paginas/detailProduct/detailUno.html?id=" + 1;
     let subContenedor = document.createElement("div");
     subContenedor.classList.add("singleProduct");
     let foto = document.createElement("img");
@@ -27,10 +30,13 @@ function renderizarProductos(lista){
     title.textContent = producto.nombre;
     title.classList.add("nombreProducto");
 
+    
     subContenedor.appendChild(foto);
     subContenedor.appendChild(title);
 
-    contenedor.appendChild(subContenedor);
+    link.appendChild(subContenedor);
+
+    contenedor.appendChild(link);
 });
 }
 
