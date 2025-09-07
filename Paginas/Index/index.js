@@ -17,6 +17,7 @@ const productos = [
     imagenUrl: "../../Resources/imgIndex/Kit de imágenes/Kit de imágenes/Sofá Patagonia.png",
 }
 ];
+
 function renderizarProductos(lista){
     lista.forEach(producto => {
     let subContenedor = document.createElement("div");
