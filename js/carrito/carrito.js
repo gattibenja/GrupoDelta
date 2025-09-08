@@ -103,3 +103,13 @@ function renderCarrito() {
 }
 
 renderCarrito();
+
+
+function actualizarContadorCarrito() {
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const carritoCount = document.getElementById("carritoCount");
+    if (carritoCount) {
+        carritoCount.textContent = carrito.length;
+    }
+}
+actualizarContadorCarrito();

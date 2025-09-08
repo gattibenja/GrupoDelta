@@ -21,7 +21,8 @@
         </nav>
         <div class="carritoCompra">
              <a href="../carrito/carrito.html"><img src="../../imagenes/carro-de-la-compra.png" alt=""></a>
-        </div>
+             <span id="carritoCount">0</span>
+            </div>
     </header>
 
     <main>
@@ -105,6 +106,14 @@
         guardarCarrito(carrito);
         alert("Producto agregado al carrito: " + producto.nombre);
       }
+      function actualizarContadorCarrito() {
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const carritoCount = document.getElementById("carritoCount");
+    if (carritoCount) {
+        carritoCount.textContent = carrito.length;
+    }
+}
+actualizarContadorCarrito();
     </script>
 </body>
 </html>

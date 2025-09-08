@@ -6,6 +6,7 @@ var btnVaciar = document.getElementById("btn-vaciar");
 var btnFinalizar = document.getElementById("btn-finalizar");
 var recomendadosContainer = document.getElementById("recomendados");
 
+
 function obtenerCarrito() {
   return JSON.parse(localStorage.getItem("carrito")) || [];
 }
@@ -172,3 +173,4 @@ document.addEventListener("DOMContentLoaded", function() {
   renderCarrito();
   renderProductos();
 });
+

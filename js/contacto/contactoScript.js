@@ -68,3 +68,13 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     mensajeInput.classList.remove("input-success");
   }
 });
+
+function actualizarContadorCarrito() {
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const carritoCount = document.getElementById("carritoCount");
+    if (carritoCount) {
+        carritoCount.textContent = carrito.length;
+    }
+}
+
+actualizarContadorCarrito();
