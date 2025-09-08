@@ -23,7 +23,7 @@ function renderizarProductos(lista){
     lista.forEach(producto => {
     let link = document.createElement('a');
     link.classList.add('linkDestacados');
-    link.href = `../detailProduct/detailUno.html?id=${producto.id}`;
+    link.href = `./Paginas/detailProduct/detailUno.html?id=${producto.id}`;
     let subContenedor = document.createElement("div");
     subContenedor.classList.add("singleProduct");
     let foto = document.createElement("img");
